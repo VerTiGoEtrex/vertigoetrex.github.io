@@ -1,0 +1,11 @@
+# Site settings
+title: Noah Crocker Codes
+email: n@ncrocker.codes
+description: > # this means to ignore newlines until "baseurl:"
+  Aviator, Pianist, and Hacker from the United States.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://localhost:4000" # the base hostname & protocol for your site
+github_username: VerTiGoEtrex
+
+# Build settings
+markdown: kramdown

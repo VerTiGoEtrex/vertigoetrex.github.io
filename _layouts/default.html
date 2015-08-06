@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body class="bg">
-    {% include header.html %}
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <body>
+    <div id="meny-menu">
+      <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+      <h2>Pages</h2>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.title %}
+          <li>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <h2>Recent Posts</h2>
+      <ul>
+        {% for post in site.posts offset: 0 limit: 10 %}
+        <li>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-    {% include footer.html %}
+    <div class="meny-arrow"></div>
+    <div id="meny-content">
+      {% include header.html %}
+      <div class="page-content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
 
     <!-- Analytics -->
     <script>
@@ -20,8 +44,24 @@
       ga('send', 'pageview');
     </script>
 
-    <!-- Dynamic-loadify website -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Meny -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/meny/1.4.0/meny.js"></script>
+    <script>
+      // Create an instance of Meny
+      var meny = Meny.create({
+        menuElement: document.querySelector( '#meny-menu' ),
+        contentsElement: document.querySelector( '#meny-content' ),
+        // [optional] The width of the menu (when using left/right position)
+        width: 300,
+        // [optional] Distance from mouse (in pixels) when menu should open
+        threshold: 40,
+      });
+    </script>
+
+    <!-- Dynamic-loadify website -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js"></script>
     <script src="{{ site.url }}/js/historyify.js"></script>
 

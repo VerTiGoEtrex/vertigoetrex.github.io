@@ -262,14 +262,6 @@ var canvasHeight = 200;
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
-////EDIT
-//var canvasWidth = window.innerWidth;
-//var canvasHeight = canvas.height;
-//camera.display.x = canvasWidth / 2;
-//camera.display.y = canvasHeight / 2;
-//console.log(canvasWidth);
-//console.log(canvasHeight);
-////
 var ctx = canvas.getContext("2d");
 ctx.strokeStyle = strokeColor;
 
@@ -560,27 +552,28 @@ var fullSet = function() {
 
 var textSet = [{
   text: "NOAH",
-  sphereRadius: 80,
+  sphereRadius: 65 + Math.random() * 30,
   sphereSpace: 120,
-  unitTime: 100,
+  unitTime: 50 + Math.random() * 100,
   time: 1250
 }, {
   text: "CROCKER",
-  sphereRadius: 80,
+  sphereRadius: 65 + Math.random() * 30,
+  sphereRadius: 95,
   sphereSpace: 80,
-  unitTime: 100,
+  unitTime: 50 + Math.random() * 100,
   time: 2500
 }, {
   text: "CODES",
-  sphereRadius: 80,
+  sphereRadius: 65 + Math.random() * 30,
   sphereSpace: 100,
-  unitTime: 100,
+  unitTime: 50 + Math.random() * 100,
   time: 3750
 }, {
   text: "@@@@",
-  sphereRadius: 40 + Math.random() * 40,
+  sphereRadius: 50 + Math.random() * 40,
   sphereSpace: 150,
-  unitTime: 100,
+  unitTime: 50 + Math.random() * 100,
   time: 5000
 }];
 
@@ -616,16 +609,6 @@ var start = function() {
     ctx.strokeStyle = strokeColor;
     update();
     draw();
-  }, 1000 / 60);
+  }, 1000 / 30);
   textSetChanger();
 };
-//document.body.onmousemove = function(e) {
-  //camera.rotate.x = e.pageY / window.innerHeight * 180 - 90;
-  //camera.rotate.y = e.pageX / window.innerWidth * 180 - 90;
-  //document.onmousedown = function() {
-    //camera.zoom = Math.random() * 1 + 1
-  //};
-  //document.onmouseup = function() {
-    //camera.zoom = 1
-  //};
-//};

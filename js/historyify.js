@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
     $.get(State.url, function(data){
       var title = data.match(/<title>(.*?)<\/title>/)[1];
       document.title = title;
-      $('.page-content').html($(data).filter('.page-content').children(":first"));
+      $('.page-content').html($(data).find('.page-content').children(":first"));
       ga('send', 'pageview', {
         page: State.url,
         title: title

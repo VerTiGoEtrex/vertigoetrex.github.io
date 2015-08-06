@@ -9,26 +9,26 @@ layout: default
   <article class="post-content">
     <p>I'm Noah Crocker -- software developer, private pilot, and pianist.</p>
     <p>Website development is not my stong suit, so if something is broken,
-    <a href="https://github.com/VerTiGoEtrex/vertigoetrex.github.io/issues">please let me know.</a> </p>
+      <a href="https://github.com/VerTiGoEtrex/vertigoetrex.github.io/issues">please let me know.</a> I hate surfing the
+    net on my phone, so I don't often test on mobile devies.</p>
     <p>Otherwise, I hope you are entertained and inspired by what you see here (and if you're not, there's always the "back" button).</p>
   </article>
-  </div>
+</div>
 <div class="home">
+  <div class="container" style="text-align: center;">
+    <img style="padding: 10px; max-width: 50%;" src="{{ site.url }}/assets/img/main_banner.jpg">
+    <br>
+    <small>Second solo flight of my life</small>
+  </div>
   <h1 class="page-heading">Blog Posts</h1>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
   </ul>
-  <div class="jumbotron" style="padding-top: 16px; padding-bottom: 16px">
-    <div class="container">
-      <img src="{{ site.url }}/assets/img/main_banner.jpg">
-    </div>
-  </div>
 </div>

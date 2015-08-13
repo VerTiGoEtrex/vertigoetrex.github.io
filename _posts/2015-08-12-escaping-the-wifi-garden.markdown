@@ -100,7 +100,7 @@ WPA backed by an authentication server (RADIUS) seems like a semi-workable solut
 
 Unfortunately, distributing these per-user keys would be difficult. Perhaps the keys could be encoded in a QR-code or USB device for mobile or laptop devices for distribution while selling those crappy earbuds to economy-class customers. Another solution would be to distribute the keys via a separate open-encryption Wi-Fi network over an HTTPS connection, preventing attackers from eavesdropping the secrets needed to connect to the internet-facing encrypted network.
 
-In reality though, most airlines probably don't care too much about this attack. These kinds of premium networks are only interested in having enough security to keep 99% of users behaving nicely, and view the 1% as acceptable overhead compared to the cost of deploying an admittedly complex WPA-Enterprise network. Seeing as how there were no online resources (that I could find) regarding the complete bypass of Wi-Fi gardens prior to the writing of this pos, most would-be do-badders probably don't know how to break out of the garden anyway.
+In reality though, most airlines probably don't care too much about this attack. These kinds of premium networks are only interested in having enough security to keep 99% of users behaving nicely, and view the 1% as acceptable overhead compared to the cost of deploying an admittedly complex WPA-Enterprise network. Seeing as how there were no online resources (that I could find) regarding the complete bypass of Wi-Fi gardens prior to the writing of this post, most would-be do-badders probably don't know how to break out of the garden anyway.
 
 
 [firesheep]:      https://codebutler.github.io/firesheep/tc12/
